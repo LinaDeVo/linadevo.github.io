@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Scene MySpace Portfolio</title>
+
+  <style>
+    body {
+      background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg'); /* from Pinterest */
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: "Tahoma", sans-serif;
+      color: #ff69b4;
+      margin: 0;
+    }
+
+    .wrapper {
+      width: 900px;
+      margin: auto;
+      background: rgba(255, 240, 250, 0.9);
+      padding: 20px;
+      border: 4px solid #ff4fa3;
+      box-shadow: 0 0 20px hotpink;
+    }
+
+    nav {
+      margin-bottom: 20px;
+      background: #ffb6d9;
+      border: 2px solid #ff4fa3;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ff007f;
+      margin: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 1px 1px 0 white;
+    }
+
+    .profile {
+      display: flex;
+      gap: 20px;
+    }
+
+    .profile img {
+      width: 220px;
+      border: 4px solid #ff4fa3;
+      box-shadow: 0 0 10px #ff4fa3;
+    }
+
+    .about {
+      background: #ffe6f2;
+      border: 3px dashed #ff4fa3;
+      padding: 15px;
+      color: #ff1493;
+    }
+
+    h2 {
+      border-bottom: 2px solid hotpink;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <nav>
+      <a href="index.html">Profile</a>
+      <a href="citations.html">Citations</a>
+      <a href="paper.html">Research</a>
+      <a href="stories.html">Short Stories</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="profile">
+      <img src="YOUR_HEADER_OR_PROFILE_PIC_URL">
+      
+      <div class="about">
+        <h1>Your Name</h1>
+        <p><strong>Major:</strong> ...</p>
+        <p><strong>Senior Project:</strong> ...</p>
+        <p>Scene/MySpace style bio goes here! :3  
+        Favorite bands, glitter text, whatever you want.</p>
+      </div>
+    </div>
+
+    <h2>Top 8 (or something else cute)</h2>
+    <p>Add images, icons, links, or even glitter GIFs.</p>
+  </div>
+
+</body>
+</html>
