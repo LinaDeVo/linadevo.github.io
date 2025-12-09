@@ -3,142 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lina DeVivo Portfolio</title>
+<title>Lina DeVivo | Portfolio</title>
+
 <style>
-  /* Body + Background */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Tahoma', sans-serif;
-    background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #Fdedee;
-  }
+/* ------------------------------
+   GLOBAL + CURSOR
+--------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') 
+              no-repeat center center fixed;
+  background-size: cover;
+  font-family: Tahoma, sans-serif;
+  color: #FDEDEE;
 
-  /* Wrapper container */
-  .wrapper {
-    width: 950px;
-    margin: auto;
-    padding: 20px;
-    background: rgba(102, 0, 38, 0.85); /* dark raspberry overlay for readability */
-    border-radius: 12px;
-    box-shadow: 0 0 25px #330013;
-  }
+  /* heart cursor */
+  cursor: url('https://i.imgur.com/Jy9l8QX.png'), auto;
+}
 
-  /* Navigation bar */
-  nav {
-    background-color: #660026;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #330013;
-    margin-bottom: 20px;
-  }
+/* WRAPPER */
+.wrapper {
+  width: 950px;
+  margin: 25px auto;
+  background: rgba(102, 0, 38, 0.88);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px #330013;
+}
 
-  nav a {
-    color: #Fdedee;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    text-shadow: 1px 1px 2px black;
-  }
+/* ------------------------------
+   NAVIGATION
+--------------------------------*/
+nav {
+  background: #660026;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  box-shadow: 0 0 10px #330013;
+}
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+nav a {
+  color: #FDEDEE;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 2px black;
+}
 
-  /* Profile section */
-  .profile {
-    display: flex;
-    gap: 25px;
-    margin-top: 10px;
-    background-color: rgba(102, 0, 38, 0.95);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #330013;
-  }
+nav a:hover {
+  background: #8a0037;
+  border-radius: 5px;
+}
 
-  .profile img {
-    width: 220px;
-    height: auto;
-    border: 4px solid #Fdedee;
-    border-radius: 10px;
-  }
+/* ------------------------------
+   TWO COLUMN LAYOUT
+--------------------------------*/
+.columns {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
 
-  .about {
-    flex-grow: 1;
-  }
+/* LEFT COLUMN (Profile Sidebar) */
+.left-col {
+  background: rgba(102, 0, 38, 0.95);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #330013;
+}
 
-  .about h1 {
-    margin-top: 0;
-    font-size: 28px;
-    border-bottom: 2px solid #Fdedee;
-    padding-bottom: 5px;
-  }
+.left-col img {
+  width: 100%;
+  border-radius: 12px;
+  border: 4px solid #FDEDEE;
+}
 
-  .about p {
-    line-height: 1.5;
-  }
+.profile-info h2 {
+  border-bottom: 2px solid #FDEDEE;
+  padding-bottom: 4px;
+  margin-top: 12px;
+}
 
-  /* Section placeholders */
-  .section {
-    margin-top: 30px;
-    background-color: rgba(102, 0, 38, 0.95);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #330013;
-  }
+.profile-info p {
+  margin: 8px 0;
+}
 
-  .section h2 {
-    margin-top: 0;
-    border-bottom: 1px solid #Fdedee;
-    padding-bottom: 5px;
-  }
+/* RIGHT COLUMN (Main Content) */
+.right-col .section {
+  background: rgba(102, 0, 38, 0.95);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #330013;
+}
 
+.section h2 {
+  border-bottom: 1px solid #FDEDEE;
+  padding-bottom: 4px;
+}
+
+/* MUSIC PLAYER */
+.music-player {
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+}
 </style>
 </head>
 
 <body>
 
-  <div class="wrapper">
+<div class="wrapper">
 
-    <!-- Navigation bar -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="browse.html">Browse</a>
-      <a href="search.html">Search</a>
-      <a href="messages.html">Messages</a>
-      <a href="blog.html">Blog</a>
-      <a href="bulletins.html">Bulletins</a>
-      <a href="forum.html">Forum</a>
-      <a href="groups.html">Groups</a>
-      <a href="layouts.html">Layouts</a>
-      <a href="favs.html">Favs</a>
-    </nav>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="browse.html">Browse</a>
+    <a href="search.html">Search</a>
+    <a href="messages.html">Messages</a>
+    <a href="blog.html">Blog</a>
+    <a href="bulletins.html">Bulletins</a>
+    <a href="forum.html">Forum</a>
+    <a href="groups.html">Groups</a>
+    <a href="layouts.html">Layouts</a>
+    <a href="favs.html">Favs</a>
+  </nav>
 
-    <!-- Home / Profile Section -->
-    <div class="profile">
-      <img src="https://i.pinimg.com/736x/e2/59/ec/e259ec872665501f6ab260b62518faa4.jpg" alt="Profile Picture">
-      <div class="about">
-        <h1>Lina DeVivo</h1>
+  <!-- TWO COLUMNS -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+      <img src="https://i.pinimg.com/736x/e2/59/ec/e259ec872665501f6ab260b62518faa4.jpg" alt="Profile">
+
+      <div class="profile-info">
+        <h2>Lina DeVivo</h2>
         <p><strong>Major:</strong> Writing Studies</p>
         <p><strong>Senior Project:</strong> Capstone</p>
-        <p>Insert bio here. Not too sure what to add yet, but we ball.</p>
+        <p>Your bio goes here—write whatever fits your identity, vibe, or capstone insight.</p>
       </div>
     </div>
 
-    <!-- Example sections placeholders -->
-    <div class="section">
-      <h2>Top 8 Favorites</h2>
-      <p>Optional images, GIFs, or icons of inspirations.</p>
-    </div>
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+      
+      <div class="section">
+        <h2>Top 8 Favorites</h2>
+        <p>Add GIFs, moodboards, inspo, aesthetic boards, etc.</p>
+      </div>
 
-    <div class="section">
-      <h2>Profile Highlights</h2>
-      <p>Any additional info I want people to see at first glance.</p>
-    </div>
+      <div class="section">
+        <h2>Profile Highlights</h2>
+        <p>Important things you want people to see first.</p>
+      </div>
 
-  </div>
+      <!-- MUSIC PLAYER -->
+      <div class="section music-player">
+        <h2>♫ Now Playing</h2>
+        <iframe style="border-radius:12px" width="100%" height="152"
+          src="https://open.spotify.com/embed/track/1VdZ0vKfR5jneCmWIUAmVr?utm_source=generator"
+          frameBorder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+
+    </div> <!-- right-col -->
+
+  </div> <!-- columns -->
+
+</div> <!-- wrapper -->
+
 </body>
 </html>
