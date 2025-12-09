@@ -1,9 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinaDeVo Portfolio</title>
+<style>
+  /* Body + Background */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tahoma', sans-serif;
+    background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #Fdedee;
+  }
+
+  /* Wrapper container */
+  .wrapper {
+    width: 950px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(102, 0, 38, 0.85); /* dark raspberry overlay for readability */
+    border-radius: 12px;
+    box-shadow: 0 0 25px #330013;
+  }
+
+  /* Navigation bar */
+  nav {
+    background-color: #660026;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #330013;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    color: #Fdedee;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Profile section */
+  .profile {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    background-color: rgba(102, 0, 38, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #330013;
+  }
+
+  .profile img {
+    width: 220px;
+    height: auto;
+    border: 4px solid #Fdedee;
+    border-radius: 10px;
+  }
+
+  .about {
+    flex-grow: 1;
+  }
+
+  .about h1 {
+    margin-top: 0;
+    font-size: 28px;
+    border-bottom: 2px solid #Fdedee;
+    padding-bottom: 5px;
+  }
+
+  .about p {
+    line-height: 1.5;
+  }
+
+  /* Section placeholders */
+  .section {
+    margin-top: 30px;
+    background-color: rgba(102, 0, 38, 0.95);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #330013;
+  }
+
+  .section h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #Fdedee;
+    padding-bottom: 5px;
+  }
+
+</style>
 </head>
+
 <body>
-  <h1>My website works!</h1>
+
+  <div class="wrapper">
+
+    <!-- Navigation bar -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="search.html">Search</a>
+      <a href="messages.html">Messages</a>
+      <a href="blog.html">Blog</a>
+      <a href="bulletins.html">Bulletins</a>
+      <a href="forum.html">Forum</a>
+      <a href="groups.html">Groups</a>
+      <a href="layouts.html">Layouts</a>
+      <a href="favs.html">Favs</a>
+    </nav>
+
+    <!-- Home / Profile Section -->
+    <div class="profile">
+      <img src="https://i.pinimg.com/736x/e2/59/ec/e259ec872665501f6ab260b62518faa4.jpg" alt="Profile Picture">
+      <div class="about">
+        <h1>Lina DeVo</h1>
+        <p><strong>Major:</strong> Your Major Here</p>
+        <p><strong>Senior Project:</strong> Title Here</p>
+        <p>A brief “scene-style” bio or intro goes here, similar to Fig. 1. Add your favorite colors, bands, or aesthetic notes.</p>
+      </div>
+    </div>
+
+    <!-- Example sections placeholders -->
+    <div class="section">
+      <h2>Top 8 Favorites</h2>
+      <p>Optional images, GIFs, or icons of inspirations.</p>
+    </div>
+
+    <div class="section">
+      <h2>Profile Highlights</h2>
+      <p>Any additional info you want people to see at first glance.</p>
+    </div>
+
+  </div>
 </body>
 </html>
