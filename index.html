@@ -6,155 +6,174 @@
 <title>Lina DeVivo Portfolio</title>
 
 <style>
-  /* Body + Background */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Tahoma', sans-serif;
-    background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #Fdedee;
-    cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym506.ani'), auto;
-  }
 
-  /* Wrapper container */
-  .wrapper {
-    width: 950px;
-    margin: auto;
-    padding: 20px;
-    background: rgba(102, 0, 38, 0.85);
-    border-radius: 12px;
-    box-shadow: 0 0 25px #330013;
-  }
+/* ---------- GLOBAL STYLES ---------- */
 
-  /* Navigation bar */
-  nav {
-    background-color: #660026;
-    display: flex;
-    justify-content: space-around;
-    padding: 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #330013;
-    margin-bottom: 20px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+  background-size: 500px;
+  color: #FDEDEE;
+}
 
-  nav a {
-    color: #Fdedee;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    text-shadow: 1px 1px 2px black;
-  }
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
 
-  nav a:hover {
-    text-decoration: underline;
-  }
+/* ---------- NAV BAR (SpaceHey Style) ---------- */
 
-  /* Profile section */
-  .profile {
-    display: flex;
-    gap: 25px;
-    margin-top: 10px;
-    background-color: rgba(102, 0, 38, 0.95);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #330013;
-  }
+nav {
+  background-color: #660026;
+  padding: 10px;
+  border: 3px solid #ff7fad;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px #330013;
+}
 
-  .profile img {
-    width: 220px;
-    height: auto;
-    border: 4px solid #Fdedee;
-    border-radius: 10px;
-  }
+nav a {
+  color: #FDEDEE;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+  font-size: 14px;
+}
 
-  .about {
-    flex-grow: 1;
-  }
+nav a:hover {
+  text-decoration: underline;
+}
 
-  .about h1 {
-    margin-top: 0;
-    font-size: 28px;
-    border-bottom: 2px solid #Fdedee;
-    padding-bottom: 5px;
-  }
+/* ---------- TWO COLUMN LAYOUT ---------- */
 
-  .about p {
-    line-height: 1.5;
-  }
+.columns {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 15px;
+}
 
-  /* SpaceHey-style content boxes */
-  .section {
-    margin-top: 30px;
-    background-color: rgba(102, 0, 38, 0.95);
-    padding: 15px;
-    border-radius: 10px;
-    border: 2px solid pink;
-    box-shadow: 0 0 15px #330013, 0 0 10px pink;
-  }
+/* ---------- SPACEHEY-STYLE BOX ---------- */
 
-  .section h2 {
-    margin-top: 0;
-    border-bottom: 1px solid #Fdedee;
-    padding-bottom: 5px;
-  }
+.box {
+  background-color: rgba(102, 0, 38, 0.90);
+  border: 3px solid #ff7fad;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 12px #330013, inset 0 0 8px #330013;
+}
 
-  /* Gloomy Bear / Nyan Cat GIF */
-  .cute-gif {
-    width: 180px;
-    display: block;
-    margin: 20px auto 0 auto;
-    border-radius: 10px;
-  }
+.box h1, .box h2 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #FDEDEE;
+  font-weight: bold;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+
+.profile-pic {
+  border: 3px solid #ff7fad;
+  width: 100%;
+}
+
+/* ---------- GIF ---------- */
+
+.cute-gif {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 3px solid #ff7fad;
+}
 
 </style>
 </head>
 
 <body>
 
-  <div class="wrapper">
+<div class="wrapper">
 
-    <!-- Navigation bar -->
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Browse</a>
-      <a href="#">Search</a>
-      <a href="#">Messages</a>
-      <a href="#">Blog</a>
-      <a href="#">Bulletins</a>
-      <a href="#">Forum</a>
-      <a href="#">Groups</a>
-      <a href="#">Layouts</a>
-      <a href="#">Favs</a>
-    </nav>
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Browse</a>
+    <a href="#">Search</a>
+    <a href="#">Messages</a>
+    <a href="#">Blog</a>
+    <a href="#">Bulletins</a>
+    <a href="#">Forum</a>
+    <a href="#">Groups</a>
+    <a href="#">Layouts</a>
+    <a href="#">Favs</a>
+  </nav>
 
-    <!-- Profile Header -->
-    <div class="profile">
-      <img src="https://i.pinimg.com/736x/e2/59/ec/e259ec872665501f6ab260b62518faa4.jpg" alt="Profile Picture">
-      <div class="about">
-        <h1>Lina DeVivo</h1>
-        <p><strong>Major:</strong> Writing Studies</p>
-        <p><strong>Senior Project:</strong> Capstone</p>
-        <p>Insert bio here. Not too sure what to add yet, but we ball.</p>
+  <!-- Two Column Layout -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div class="left">
+
+      <div class="box">
+        <h1>Lina</h1>
+        <img src="https://i.pinimg.com/736x/e2/59/ec/e259ec872665501f6ab260b62518faa4.jpg" class="profile-pic">
+        <p><strong>Status:</strong> online!</p>
       </div>
+
+      <div class="box">
+        <h2>Contacting Lina</h2>
+        <p>• Add to Friends<br>• Send Message<br>• Add to Favorites<br>• Block User<br>• Report User</p>
+      </div>
+
+      <div class="box">
+        <h2>Lina’s Interests</h2>
+        <p><strong>General:</strong> ...</p>
+        <p><strong>Music:</strong> ...</p>
+        <p><strong>Movies:</strong> ...</p>
+        <p><strong>Television:</strong> ...</p>
+        <p><strong>Books:</strong> ...</p>
+        <p><strong>Heroes:</strong> ...</p>
+      </div>
+
+      <div class="box">
+        <h2>Lina’s Links</h2>
+        <p>(Add your links here!)</p>
+      </div>
+
+      <img class="cute-gif" src="https://media1.tenor.com/m/8mZ5-4W2KI0AAAAC/gloomy-bear-pink.gif">
+
     </div>
 
-    <!-- Interests Box -->
-    <div class="section">
-      <h2>Interests</h2>
-      <p>Add your interests here! (Music, books, hobbies, favorite aesthetics, etc.)</p>
-    </div>
+    <!-- RIGHT COLUMN -->
+    <div class="right">
 
-    <!-- Details Box -->
-    <div class="section">
-      <h2>Details</h2>
-      <p>Put your details here: age, location, pronouns, etc.</p>
-    </div>
+      <div class="box">
+        <h2>Edit Your Profile</h2>
+      </div>
 
-    <!-- Cute GIF -->
-    <img class="cute-gif" src="https://media1.tenor.com/m/8mZ5-4W2KI0AAAAC/gloomy-bear-pink.gif" alt="Cute GIF">
+      <div class="box">
+        <h2>Lina’s Latest Blog Entries</h2>
+        <p>No blog entries yet.</p>
+      </div>
+
+      <div class="box">
+        <h2>Lina’s Friend Space</h2>
+        <p>Friends will appear here.</p>
+      </div>
+
+      <div class="box">
+        <h2>Friend Comments</h2>
+        <p>No comments yet.</p>
+      </div>
+
+    </div>
 
   </div>
+
+</div>
 
 </body>
 </html>
