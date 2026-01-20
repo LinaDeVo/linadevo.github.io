@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Browse Writing – Lina</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, sans-serif;
+    background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+    background-size: 500px;
+    color: #FDEDEE;
+  }
+
+  .wrapper {
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* NAV */
+  nav {
+    background-color: #660026;
+    padding: 10px;
+    border: 3px solid #ff7fad;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px #330013;
+  }
+
+  nav a {
+    color: #FDEDEE;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* LAYOUT */
+  .columns {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+  }
+
+  /* BOXES */
+  .box {
+    background-color: rgba(102, 0, 38, 0.95);
+    border: 3px solid #ff7fad;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px #330013, inset 0 0 8px #330013;
+  }
+
+  .box h2 {
+    font-size: 16px;
+    margin-top: 0;
+    border-bottom: 1px solid pink;
+    padding-bottom: 4px;
+  }
+
+  .box p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* FEATURED */
+  .featured h1 {
+    font-size: 22px;
+    margin-top: 0;
+    border-bottom: 2px solid pink;
+    padding-bottom: 5px;
+  }
+
+  .read-btn {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #ffb3d9;
+    color: #660026;
+    border: 2px solid #ff7fad;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  .read-btn:hover {
+    background-color: #ffd0e8;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 0;
+  }
+
+  ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="browse.html">Browse</a>
+    <a href="blog.html">Blog</a>
+    <a href="groups.html">Groups</a>
+    <a href="#">Favs</a>
+  </nav>
+
+  <!-- TWO COLUMNS -->
+  <div class="columns">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <div class="box">
+        <h2>Featured Essay</h2>
+        <p>
+          <strong>Capstone Project</strong><br>
+          A long-form research and reflective essay exploring writing, identity,
+          disability, and feminist theory.
+        </p>
+        <a class="read-btn" href="pdfs/capstone.pdf" target="_blank">
+          Read Full Essay (PDF)
+        </a>
+      </div>
+
+      <div class="box">
+        <h2>Other Writing</h2>
+        <ul>
+          <li><a href="blog.html#essay1" style="color:pink;">Short Essay Title</a></li>
+          <li><a href="blog.html#essay2" style="color:pink;">Reflection Title</a></li>
+          <li><a href="blog.html#essay3" style="color:pink;">Theory Response</a></li>
+          <li><a href="blog.html#essay4" style="color:pink;">Creative Piece</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Topics</h2>
+        <p>
+          feminism<br>
+          disability studies<br>
+          intersectionality<br>
+          writing studies<br>
+          identity & media
+        </p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <!-- FEATURED ESSAY EXCERPT -->
+      <div class="box featured">
+        <h1>Capstone Project</h1>
+        <p><em>Senior Writing Studies Capstone</em></p>
+
+        <p>
+          This project examines how writing functions as a site of identity formation,
+          access, and resistance. Drawing from feminist and disability studies, the essay
+          explores the intersections of personal narrative, theory, and institutional
+          language.
+        </p>
+
+        <p>
+          Through archival analysis and reflective practice, the project asks how writing
+          can be both a tool of exclusion and a means of survival.
+        </p>
+
+        <a class="read-btn" href="pdfs/capstone.pdf" target="_blank">
+          Read Full Essay (PDF)
+        </a>
+      </div>
+
+      <!-- SMALLER WRITING PIECES -->
+      <div class="box">
+        <h2>Short Essay Title</h2>
+        <p>
+          A brief description or excerpt of this piece. This can be one or two sentences
+          that summarize the argument or focus.
+        </p>
+        <a class="read-btn" href="blog.html#essay1">
+          Read more on Blog →
+        </a>
+      </div>
+
+      <div class="box">
+        <h2>Reflection Title</h2>
+        <p>
+          An excerpt or context for this reflective piece. This can be personal, academic,
+          or creative.
+        </p>
+        <a class="read-btn" href="blog.html#essay2">
+          Read more on Blog →
+        </a>
+      </div>
+
+      <div class="box">
+        <h2>Theory Response</h2>
+        <p>
+          A short response engaging with feminist or disability theory texts.
+        </p>
+        <a class="read-btn" href="blog.html#essay3">
+          Read more on Blog →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
 
