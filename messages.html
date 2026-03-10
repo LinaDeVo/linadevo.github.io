@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Messages – Lina</title>
 
+<style>
+
+body {
+  margin:0;
+  padding:0;
+  font-family: Tahoma, sans-serif;
+  background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+  background-size:500px;
+  color:#FDEDEE;
+}
+
+.wrapper{
+  width:1000px;
+  margin:auto;
+  padding:20px;
+}
+
+/* NAV */
+
+nav{
+  background:#660026;
+  padding:10px;
+  border:3px solid #ff7fad;
+  text-align:center;
+  margin-bottom:20px;
+  box-shadow:0 0 10px #330013;
+}
+
+nav a{
+  color:#FDEDEE;
+  text-decoration:none;
+  margin:0 8px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+/* INBOX */
+
+.inbox{
+  background:rgba(102,0,38,0.95);
+  border:3px solid #ff7fad;
+  box-shadow:0 0 15px #330013, inset 0 0 8px #330013;
+}
+
+.inbox-header{
+  padding:10px;
+  border-bottom:1px solid pink;
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* MESSAGE PREVIEW */
+
+.message{
+  border-bottom:1px solid #ff7fad;
+}
+
+.message button{
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  color:#FDEDEE;
+  padding:12px;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.message button:hover{
+  background:#7a0031;
+}
+
+/* MESSAGE CONTENT */
+
+.content{
+  display:none;
+  padding:12px;
+  background:#5a0022;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.timestamp{
+  float:right;
+  font-size:12px;
+  opacity:.8;
+}
+
+</style>
+
+<script>
+
+function toggleMessage(id){
+  const msg=document.getElementById(id);
+
+  if(msg.style.display==="block"){
+    msg.style.display="none";
+  }else{
+    msg.style.display="block";
+  }
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="browse.html">Browse</a>
+<a href="blog.html">Blog</a>
+<a href="messages.html">Messages</a>
+<a href="groups.html">Groups</a>
+</nav>
+
+<div class="inbox">
+
+<div class="inbox-header">
+Inbox (3 Messages)
+</div>
+
+<!-- MESSAGE 1 -->
+
+<div class="message">
+<button onclick="toggleMessage('msg1')">
+From: bell hooks <span class="timestamp">2000</span>
+</button>
+
+<div class="content" id="msg1">
+
+<p>
+"Feminism is for everybody."
+</p>
+
+<p>
+bell hooks' writing deeply influences how I think about theory,
+education, and the relationship between personal narrative and
+political critique. Her work emphasizes accessibility, community,
+and the importance of speaking across difference.
+</p>
+
+</div>
+</div>
+
+<!-- MESSAGE 2 -->
+
+<div class="message">
+<button onclick="toggleMessage('msg2')">
+From: Alison Kafer <span class="timestamp">2013</span>
+</button>
+
+<div class="content" id="msg2">
+
+<p>
+"Disability futures and disability justice require us to imagine
+worlds otherwise."
+</p>
+
+<p>
+Kafer's work on disability futures reshapes how we think about
+access, time, and political imagination. Her writing informs the
+framework of my capstone project.
+</p>
+
+</div>
+</div>
+
+<!-- MESSAGE 3 -->
+
+<div class="message">
+<button onclick="toggleMessage('msg3')">
+From: Audre Lorde <span class="timestamp">1984</span>
+</button>
+
+<div class="content" id="msg3">
+
+<p>
+"Your silence will not protect you."
+</p>
+
+<p>
+Lorde's writing highlights the power of speaking and writing from
+marginalized positions. Her work influences how I approach
+intersectionality, identity, and resistance through writing.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
