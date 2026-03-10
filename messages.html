@@ -41,18 +41,18 @@ nav a:hover{
 text-decoration:underline;
 }
 
-/* MESSENGER LAYOUT */
+/* MESSENGER */
 
 .messenger{
 display:grid;
-grid-template-columns:300px 1fr;
-height:600px;
+grid-template-columns:320px 1fr;
+height:620px;
 border:3px solid #ff7fad;
 background:rgba(102,0,38,0.95);
 box-shadow:0 0 15px #330013;
 }
 
-/* LEFT CHAT LIST */
+/* CHAT LIST */
 
 .chat-list{
 border-right:2px solid pink;
@@ -60,6 +60,9 @@ overflow-y:auto;
 }
 
 .chat{
+display:flex;
+align-items:center;
+gap:10px;
 padding:12px;
 border-bottom:1px solid pink;
 cursor:pointer;
@@ -69,16 +72,26 @@ cursor:pointer;
 background:#7a0031;
 }
 
+.chat img{
+width:40px;
+height:40px;
+border-radius:4px;
+}
+
+.chat-text{
+font-size:13px;
+}
+
 .chat-name{
 font-weight:bold;
 }
 
 .chat-preview{
-font-size:12px;
+font-size:11px;
 opacity:.8;
 }
 
-/* RIGHT CHAT WINDOW */
+/* CHAT WINDOW */
 
 .chat-window{
 padding:20px;
@@ -86,22 +99,36 @@ overflow-y:auto;
 }
 
 .message{
-margin-bottom:15px;
-padding:10px;
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.message img{
+width:45px;
+height:45px;
+border-radius:4px;
+}
+
+.bubble{
 background:#7a0031;
-border-radius:6px;
+padding:12px;
+border-radius:8px;
+max-width:500px;
 }
 
-.message strong{
-color:#ffd1ea;
+.timestamp{
+font-size:11px;
+opacity:.7;
+margin-top:4px;
 }
 
-/* DEFAULT SCREEN */
+/* DEFAULT */
 
 .default{
 text-align:center;
 margin-top:200px;
-opacity:.8;
+opacity:.7;
 }
 
 </style>
@@ -128,49 +155,69 @@ document.getElementById("default").style.display="none";
 <div class="wrapper">
 
 <nav>
-  <a href="index.html">Home</a>
-    <a href="browse.html">Browse</a>
-    <a href="search.html">Search</a>
-    <a href="messages.html">Messages</a>
-    <a href="blog.html">Blog</a>
-    <a href="bulletins.html">Bulletins</a>
-    <a href="forum.html">Forum</a>
-    <a href="groups.html">Groups</a>
-    <a href="layouts.html">Layouts</a>
-    <a href="favs.html">Favs</a>
-    <a href="about.html">About</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="browse.html">Browse</a>
+<a href="blog.html">Blog</a>
+<a href="messages.html">Messages</a>
+<a href="groups.html">Groups</a>
 </nav>
 
 <div class="messenger">
 
-<!-- LEFT CHAT LIST -->
+<!-- LEFT SIDEBAR -->
 
 <div class="chat-list">
 
 <div class="chat" onclick="openChat('hooks')">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="chat-text">
 <div class="chat-name">bell hooks</div>
-<div class="chat-preview">feminism is for everybody…</div>
+<div class="chat-preview">Feminism is for everybody…</div>
+</div>
 </div>
 
 <div class="chat" onclick="openChat('lorde')">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="chat-text">
 <div class="chat-name">Audre Lorde</div>
-<div class="chat-preview">your silence will not protect you…</div>
+<div class="chat-preview">Your silence will not protect you…</div>
+</div>
 </div>
 
 <div class="chat" onclick="openChat('kafer')">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="chat-text">
 <div class="chat-name">Alison Kafer</div>
-<div class="chat-preview">disability futures…</div>
+<div class="chat-preview">Disability futures require…</div>
+</div>
+</div>
+
+<div class="chat" onclick="openChat('clare')">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="chat-text">
+<div class="chat-name">Eli Clare</div>
+<div class="chat-preview">Some of us move through the world…</div>
+</div>
+</div>
+
+<div class="chat" onclick="openChat('mcruer')">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="chat-text">
+<div class="chat-name">Robert McRuer</div>
+<div class="chat-preview">Compulsory able-bodiedness…</div>
+</div>
 </div>
 
 </div>
 
-<!-- RIGHT CHAT WINDOW -->
+<!-- CHAT WINDOW -->
 
 <div class="chat-window">
 
 <div id="default" class="default">
 <h2>No chat selected</h2>
-<p>Select a message from the left.</p>
+<p>Select a conversation on the left.</p>
 </div>
 
 <!-- bell hooks -->
@@ -178,14 +225,11 @@ document.getElementById("default").style.display="none";
 <div id="hooks" class="chat-content" style="display:none;">
 
 <div class="message">
-<strong>bell hooks:</strong><br>
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="bubble">
 Feminism is for everybody.
+<div class="timestamp">2000</div>
 </div>
-
-<div class="message">
-<strong>Lina:</strong><br>
-Your work shapes how I understand accessible theory and the
-relationship between education and liberation.
 </div>
 
 </div>
@@ -195,14 +239,11 @@ relationship between education and liberation.
 <div id="lorde" class="chat-content" style="display:none;">
 
 <div class="message">
-<strong>Audre Lorde:</strong><br>
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="bubble">
 Your silence will not protect you.
+<div class="timestamp">1984</div>
 </div>
-
-<div class="message">
-<strong>Lina:</strong><br>
-Your writing reminds me that speaking and writing from
-marginalized positions is both political and necessary.
 </div>
 
 </div>
@@ -212,14 +253,39 @@ marginalized positions is both political and necessary.
 <div id="kafer" class="chat-content" style="display:none;">
 
 <div class="message">
-<strong>Alison Kafer:</strong><br>
-Disability futures require imagining worlds otherwise.
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="bubble">
+Disability futures and disability justice require us to imagine worlds otherwise.
+<div class="timestamp">2013</div>
+</div>
 </div>
 
+</div>
+
+<!-- Eli Clare -->
+
+<div id="clare" class="chat-content" style="display:none;">
+
 <div class="message">
-<strong>Lina:</strong><br>
-Your work helps frame the theoretical structure of my
-capstone essay.
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="bubble">
+Some of us move through the world in bodies that are not considered normal.
+<div class="timestamp">Exile and Pride, 1999</div>
+</div>
+</div>
+
+</div>
+
+<!-- Robert McRuer -->
+
+<div id="mcruer" class="chat-content" style="display:none;">
+
+<div class="message">
+<img src="https://i.imgur.com/7Q8YF5D.png">
+<div class="bubble">
+Compulsory able-bodiedness functions by making disability invisible and unthinkable.
+<div class="timestamp">Crip Theory, 2006</div>
+</div>
 </div>
 
 </div>
