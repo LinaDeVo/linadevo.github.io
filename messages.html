@@ -6,108 +6,116 @@
 
 <style>
 
-body {
-  margin:0;
-  padding:0;
-  font-family: Tahoma, sans-serif;
-  background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
-  background-size:500px;
-  color:#FDEDEE;
+body{
+margin:0;
+font-family:Tahoma;
+background:url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+background-size:500px;
+color:#FDEDEE;
 }
 
 .wrapper{
-  width:1000px;
-  margin:auto;
-  padding:20px;
+width:1100px;
+margin:auto;
+padding:20px;
 }
 
 /* NAV */
 
 nav{
-  background:#660026;
-  padding:10px;
-  border:3px solid #ff7fad;
-  text-align:center;
-  margin-bottom:20px;
-  box-shadow:0 0 10px #330013;
+background:#660026;
+padding:10px;
+border:3px solid #ff7fad;
+text-align:center;
+margin-bottom:20px;
 }
 
 nav a{
-  color:#FDEDEE;
-  text-decoration:none;
-  margin:0 8px;
-  font-weight:bold;
-  font-size:14px;
+color:#FDEDEE;
+text-decoration:none;
+margin:0 8px;
+font-weight:bold;
 }
 
 nav a:hover{
-  text-decoration:underline;
+text-decoration:underline;
 }
 
-/* INBOX */
+/* MESSENGER LAYOUT */
 
-.inbox{
-  background:rgba(102,0,38,0.95);
-  border:3px solid #ff7fad;
-  box-shadow:0 0 15px #330013, inset 0 0 8px #330013;
+.messenger{
+display:grid;
+grid-template-columns:300px 1fr;
+height:600px;
+border:3px solid #ff7fad;
+background:rgba(102,0,38,0.95);
+box-shadow:0 0 15px #330013;
 }
 
-.inbox-header{
-  padding:10px;
-  border-bottom:1px solid pink;
-  font-size:18px;
-  font-weight:bold;
+/* LEFT CHAT LIST */
+
+.chat-list{
+border-right:2px solid pink;
+overflow-y:auto;
 }
 
-/* MESSAGE PREVIEW */
+.chat{
+padding:12px;
+border-bottom:1px solid pink;
+cursor:pointer;
+}
+
+.chat:hover{
+background:#7a0031;
+}
+
+.chat-name{
+font-weight:bold;
+}
+
+.chat-preview{
+font-size:12px;
+opacity:.8;
+}
+
+/* RIGHT CHAT WINDOW */
+
+.chat-window{
+padding:20px;
+overflow-y:auto;
+}
 
 .message{
-  border-bottom:1px solid #ff7fad;
+margin-bottom:15px;
+padding:10px;
+background:#7a0031;
+border-radius:6px;
 }
 
-.message button{
-  width:100%;
-  text-align:left;
-  background:none;
-  border:none;
-  color:#FDEDEE;
-  padding:12px;
-  font-size:14px;
-  cursor:pointer;
+.message strong{
+color:#ffd1ea;
 }
 
-.message button:hover{
-  background:#7a0031;
-}
+/* DEFAULT SCREEN */
 
-/* MESSAGE CONTENT */
-
-.content{
-  display:none;
-  padding:12px;
-  background:#5a0022;
-  font-size:14px;
-  line-height:1.5;
-}
-
-.timestamp{
-  float:right;
-  font-size:12px;
-  opacity:.8;
+.default{
+text-align:center;
+margin-top:200px;
+opacity:.8;
 }
 
 </style>
 
 <script>
 
-function toggleMessage(id){
-  const msg=document.getElementById(id);
+function openChat(id){
 
-  if(msg.style.display==="block"){
-    msg.style.display="none";
-  }else{
-    msg.style.display="block";
-  }
+let chats=document.querySelectorAll(".chat-content");
+chats.forEach(c => c.style.display="none");
+
+document.getElementById(id).style.display="block";
+
+document.getElementById("default").style.display="none";
 
 }
 
@@ -121,90 +129,96 @@ function toggleMessage(id){
 
 <nav>
 <a href="index.html">Home</a>
-    <a href="browse.html">Browse</a>
-    <a href="search.html">Search</a>
-    <a href="messages.html">Messages</a>
-    <a href="blog.html">Blog</a>
-    <a href="bulletins.html">Bulletins</a>
-    <a href="forum.html">Forum</a>
-    <a href="groups.html">Groups</a>
-    <a href="layouts.html">Layouts</a>
-    <a href="favs.html">Favs</a>
-    <a href="about.html">About</a>
+<a href="about.html">About</a>
+<a href="browse.html">Browse</a>
+<a href="blog.html">Blog</a>
+<a href="messages.html">Messages</a>
+<a href="groups.html">Groups</a>
 </nav>
 
-<div class="inbox">
+<div class="messenger">
 
-<div class="inbox-header">
-Inbox (3 Messages)
+<!-- LEFT CHAT LIST -->
+
+<div class="chat-list">
+
+<div class="chat" onclick="openChat('hooks')">
+<div class="chat-name">bell hooks</div>
+<div class="chat-preview">feminism is for everybody…</div>
 </div>
 
-<!-- MESSAGE 1 -->
+<div class="chat" onclick="openChat('lorde')">
+<div class="chat-name">Audre Lorde</div>
+<div class="chat-preview">your silence will not protect you…</div>
+</div>
+
+<div class="chat" onclick="openChat('kafer')">
+<div class="chat-name">Alison Kafer</div>
+<div class="chat-preview">disability futures…</div>
+</div>
+
+</div>
+
+<!-- RIGHT CHAT WINDOW -->
+
+<div class="chat-window">
+
+<div id="default" class="default">
+<h2>No chat selected</h2>
+<p>Select a message from the left.</p>
+</div>
+
+<!-- bell hooks -->
+
+<div id="hooks" class="chat-content" style="display:none;">
 
 <div class="message">
-<button onclick="toggleMessage('msg1')">
-From: bell hooks <span class="timestamp">2000</span>
-</button>
-
-<div class="content" id="msg1">
-
-<p>
-"Feminism is for everybody."
-</p>
-
-<p>
-bell hooks' writing deeply influences how I think about theory,
-education, and the relationship between personal narrative and
-political critique. Her work emphasizes accessibility, community,
-and the importance of speaking across difference.
-</p>
-
+<strong>bell hooks:</strong><br>
+Feminism is for everybody.
 </div>
-</div>
-
-<!-- MESSAGE 2 -->
 
 <div class="message">
-<button onclick="toggleMessage('msg2')">
-From: Alison Kafer <span class="timestamp">2013</span>
-</button>
-
-<div class="content" id="msg2">
-
-<p>
-"Disability futures and disability justice require us to imagine
-worlds otherwise."
-</p>
-
-<p>
-Kafer's work on disability futures reshapes how we think about
-access, time, and political imagination. Her writing informs the
-framework of my capstone project.
-</p>
-
-</div>
+<strong>Lina:</strong><br>
+Your work shapes how I understand accessible theory and the
+relationship between education and liberation.
 </div>
 
-<!-- MESSAGE 3 -->
+</div>
+
+<!-- Audre Lorde -->
+
+<div id="lorde" class="chat-content" style="display:none;">
 
 <div class="message">
-<button onclick="toggleMessage('msg3')">
-From: Audre Lorde <span class="timestamp">1984</span>
-</button>
+<strong>Audre Lorde:</strong><br>
+Your silence will not protect you.
+</div>
 
-<div class="content" id="msg3">
-
-<p>
-"Your silence will not protect you."
-</p>
-
-<p>
-Lorde's writing highlights the power of speaking and writing from
-marginalized positions. Her work influences how I approach
-intersectionality, identity, and resistance through writing.
-</p>
+<div class="message">
+<strong>Lina:</strong><br>
+Your writing reminds me that speaking and writing from
+marginalized positions is both political and necessary.
+</div>
 
 </div>
+
+<!-- Alison Kafer -->
+
+<div id="kafer" class="chat-content" style="display:none;">
+
+<div class="message">
+<strong>Alison Kafer:</strong><br>
+Disability futures require imagining worlds otherwise.
+</div>
+
+<div class="message">
+<strong>Lina:</strong><br>
+Your work helps frame the theoretical structure of my
+capstone essay.
+</div>
+
+</div>
+
 </div>
 
 </div>
