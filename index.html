@@ -23,7 +23,41 @@ body {
   margin: 0 auto;
   padding: 10px;
 }
+.friend-scroll{
+display:flex;
+overflow-x:auto;
+gap:15px;
+padding-top:10px;
+}
 
+.friend{
+min-width:90px;
+text-align:center;
+}
+
+.friend img{
+width:80px;
+height:80px;
+object-fit:cover;
+border:2px solid #ff7fad;
+}
+
+.username{
+font-size:12px;
+font-weight:bold;
+margin-bottom:4px;
+}
+
+/* optional cute scrollbar */
+
+.friend-scroll::-webkit-scrollbar{
+height:6px;
+}
+
+.friend-scroll::-webkit-scrollbar-thumb{
+background:#ff7fad;
+border-radius:10px;
+}
 /* ---------- NAV BAR (SpaceHey Style) ---------- */
 
 nav {
@@ -162,10 +196,44 @@ nav a:hover {
         <p>I'm Lina! (ദ്ദി ๑>؂•̀๑) Writer and Bug Enthusiast!</p></p>
       </div>
       
-      <div class="box">
-        <h2>Lina’s Friend Space</h2>
-        <p>Friends will appear here.</p>
-      </div>
+     <div class="box">
+<h2>Lina’s Friend Space</h2>
+
+<div class="friend-scroll">
+
+<div class="friend">
+<div class="username">friend1</div>
+<img src="placeholder.jpg">
+</div>
+
+<div class="friend">
+<div class="username">friend2</div>
+<img src="placeholder.jpg">
+</div>
+
+<div class="friend">
+<div class="username">friend3</div>
+<img src="placeholder.jpg">
+</div>
+
+<div class="friend">
+<div class="username">friend4</div>
+<img src="placeholder.jpg">
+</div>
+
+<div class="friend">
+<div class="username">friend5</div>
+<img src="placeholder.jpg">
+</div>
+
+<div class="friend">
+<div class="username">friend6</div>
+<img src="placeholder.jpg">
+</div>
+
+</div>
+
+</div>
 
       <div class="box">
         <h2>Friend Comments</h2>
