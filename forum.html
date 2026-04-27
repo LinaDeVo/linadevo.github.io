@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Forum</title>
 
+<style>
+
+body{
+margin:0;
+font-family:Tahoma;
+background:url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+background-size:500px;
+color:#FDEDEE;
+}
+
+.wrapper{
+width:1000px;
+margin:auto;
+padding:10px;
+}
+
+/* NAV */
+
+nav{
+background:#660026;
+padding:12px 0;
+border:3px solid #ff7fad;
+text-align:center;
+margin-bottom:20px;
+}
+
+nav a{
+color:#FDEDEE;
+text-decoration:none;
+margin:0 8px;
+font-weight:bold;
+font-size:14px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* BOX */
+
+.box{
+background:rgba(102,0,38,0.95);
+border:3px solid #ff7fad;
+padding:15px;
+margin-bottom:20px;
+box-shadow:0 0 10px #330013;
+}
+
+.box h2{
+margin-top:0;
+border-bottom:1px solid #ff7fad;
+padding-bottom:5px;
+}
+
+/* THREAD ROWS */
+
+.thread{
+display:flex;
+justify-content:space-between;
+padding:10px;
+border-bottom:1px solid #ff7fad;
+}
+
+.thread:hover{
+background:rgba(255,255,255,0.05);
+}
+
+.thread-title{
+font-weight:bold;
+}
+
+/* POSTS (REPLIES) */
+
+.post{
+display:flex;
+gap:10px;
+padding:12px 0;
+border-bottom:1px solid #ff7fad;
+}
+
+.post img{
+width:60px;
+height:60px;
+object-fit:cover;
+border:2px solid #ff7fad;
+}
+
+.post-content{
+flex:1;
+}
+
+.post-header{
+font-size:12px;
+margin-bottom:4px;
+}
+
+.post-text{
+font-size:13px;
+line-height:1.5;
+}
+
+/* SCROLL AREA FOR LONG THREADS */
+
+.thread-box{
+max-height:300px;
+overflow-y:auto;
+padding-right:10px;
+}
+
+.thread-box::-webkit-scrollbar{
+width:6px;
+}
+
+.thread-box::-webkit-scrollbar-thumb{
+background:#ff7fad;
+border-radius:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="browse.html">Browse</a>
+<a href="search.html">Search</a>
+<a href="messages.html">Messages</a>
+<a href="blog.html">Blog</a>
+<a href="bulletins.html">Bulletins</a>
+<a href="groups.html">Groups</a>
+<a href="favs.html">Favs</a>
+<a href="layouts.html">Layouts</a>
+<a href="forum.html">Forum</a>
+</nav>
+
+<!-- THREAD LIST -->
+
+<div class="box">
+<h2>Forum Topics</h2>
+
+<div class="thread">
+<div class="thread-title">What cultural narratives about disability need to change?</div>
+<div>Replies: 8</div>
+</div>
+
+<div class="thread">
+<div class="thread-title">How is disability represented in media?</div>
+<div>Replies: 5</div>
+</div>
+
+<div class="thread">
+<div class="thread-title">Can writing challenge ableism?</div>
+<div>Replies: 3</div>
+</div>
+
+</div>
+
+<!-- THREAD CONTENT (SURVEY RESPONSES) -->
+
+<div class="box">
+<h2>Thread: What cultural narratives about disability need to change?</h2>
+
+<div class="thread-box">
+
+<div class="post">
+<img src="placeholder.jpg">
+<div class="post-content">
+<div class="post-header"><strong>participant1</strong> | March 2026</div>
+<div class="post-text">
+Most disabled people can do most things if made accessible, but sometimes there is no option.
+</div>
+</div>
+</div>
+
+<div class="post">
+<img src="placeholder.jpg">
+<div class="post-content">
+<div class="post-header"><strong>participant2</strong> | March 2026</div>
+<div class="post-text">
+Disability is a struggle, but also something of power.
+</div>
+</div>
+</div>
+
+<div class="post">
+<img src="placeholder.jpg">
+<div class="post-content">
+<div class="post-header"><strong>participant3</strong> | March 2026</div>
+<div class="post-text">
+Mental illness in media has been romanticized and turned into a joke.
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<!-- YOUR RESPONSES / ANALYSIS -->
+
+<div class="box">
+<h2>Lina’s Response</h2>
+
+<p>
+These responses reflect a rejection of dominant narratives that frame disability as limitation or tragedy. 
+Instead, participants emphasize complexity, power, and the role of accessibility. This aligns with ideas from 
+crip theory, particularly the critique of compulsory able-bodiedness.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
