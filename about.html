@@ -5,7 +5,240 @@
 <title>About Lina</title>
 
 <style>
-  <script>
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, sans-serif;
+  background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
+  background-size: 500px;
+  color: #FDEDEE;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* NAV */
+nav {
+  background-color: #660026;
+  padding: 10px;
+  border: 3px solid #ff7fad;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #330013;
+}
+
+nav a {
+  color: #FDEDEE;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* LAYOUT */
+.columns {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+}
+
+/* BOXES */
+.box {
+  background-color: rgba(102, 0, 38, 0.95);
+  border: 3px solid #ff7fad;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px #330013, inset 0 0 8px #330013;
+}
+
+.box h2 {
+  font-size: 16px;
+  margin-top: 0;
+  border-bottom: 1px solid pink;
+  padding-bottom: 4px;
+}
+
+.box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* PHOTO BOX */
+.photo-box img {
+  width: 100%;
+  border: 2px solid pink;
+  margin-bottom: 8px;
+}
+
+/* BIG BIO */
+.big-bio p {
+  margin-bottom: 12px;
+}
+
+/* MP3 PLAYER */
+.mp3-player{
+  background:#ffb6d5;
+  border:3px solid #ff7fad;
+  padding:10px;
+  width:220px;
+  text-align:center;
+  box-shadow:0 0 10px #ff7fad;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+.player-img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border:2px solid #ff7fad;
+  margin-bottom:6px;
+}
+
+.song-title{
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:6px;
+  color:#660026;
+}
+
+.controls button{
+  background:#ff7fad;
+  border:none;
+  color:white;
+  font-size:16px;
+  margin:3px;
+  padding:5px 10px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.controls button:hover{
+  background:#ff4f94;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- NAV -->
+<nav>
+<a href="index.html">Home</a>
+<a href="browse.html">Browse</a>
+<a href="search.html">Search</a>
+<a href="messages.html">Messages</a>
+<a href="blog.html">Blog</a>
+<a href="bulletins.html">Bulletins</a>
+<a href="forum.html">Forum</a>
+<a href="groups.html">Groups</a>
+<a href="favs.html">Favs</a>
+<a href="about.html">About</a>
+</nav>
+
+<div class="columns">
+
+<!-- LEFT -->
+<div>
+
+<div class="box photo-box">
+<h2>Angelina De Vivo</h2>
+<img src="thinking.jpg">
+<img src="me.jpg">
+</div>
+
+<div class="mp3-player">
+
+<img src="images/player-image.jpg" class="player-img">
+
+<div class="song-title">Now Playing: ♡ Your Song Name ♡</div>
+
+<audio id="audio">
+<source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="controls">
+<button onclick="playSong()">▶</button>
+<button onclick="pauseSong()">❚❚</button>
+</div>
+
+</div>
+
+<div class="box">
+<h2>Quick Facts</h2>
+<p>
+Name: Angelina De Vivo<br>
+Major: Writing Studies<br>
+Pronouns: she/her/hers<br>
+Interests: writing, literature, manga, insects, apples, pokemon, and clown dolls
+</p>
+</div>
+
+<div class="box">
+<h2>Currently</h2>
+<p>
+Listening to: The Carpenters<br>
+Reading:The Wind Has Risen by Hori Tatsuo<br>
+Working on: Grad School
+</p>
+</div>
+
+</div>
+
+<!-- RIGHT -->
+<div>
+
+<div class="box big-bio">
+<h2>About Me</h2>
+<p>
+I'm twenty-one years old, I was born and spent the majority of my life in Warner Robins, Georgia. 
+I'm a proud granddaughter of immigrants who came here from Sicily and Taiwan. As a child I spent majority of my time
+absorbed in books — especially ones about insects or science — or playing Pokemon on my DSi.
+</p>
+
+<p>
+I'm extremely interested in pomology (study of apples) and entomology.
+</p>
+</div>
+
+<div class="box big-bio">
+<h2>As a Student</h2>
+<p>
+I'm equally interested in STEM and humanities, and I’ve spent time studying both.
+</p>
+</div>
+
+<div class="box big-bio">
+<h2>Disability & Access</h2>
+<p>Diagnosed medical conditions:</p>
+<p>- Ehlers-Danlos Syndrome (EDS)</p>
+<p>- Postural Orthostatic Tachycardia Syndrome (POTS)</p>
+<p>- Sensorineural Hearing Loss (SNHL)</p>
+</div>
+
+<div class="box big-bio">
+<h2>Queerness & Identity</h2>
+<p></p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ✅ JAVASCRIPT FIXED LOCATION -->
+<script>
 const audio = document.getElementById("audio");
 
 function playSong(){
@@ -16,249 +249,6 @@ function pauseSong(){
   audio.pause();
 }
 </script>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Tahoma, sans-serif;
-    background: url('https://i.pinimg.com/1200x/9b/7f/e6/9b7fe6e0d04ad4bec5f762435260cef7.jpg') repeat fixed;
-    background-size: 500px;
-    color: #FDEDEE;
-  }
-
-  .wrapper {
-    width: 1000px;
-    margin: auto;
-    padding: 10px;
-  }
-
-  /* NAV */
-  nav {
-    background-color: #660026;
-    padding: 10px;
-    border: 3px solid #ff7fad;
-    text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px #330013;
-  }
-
-  nav a {
-    color: #FDEDEE;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 8px;
-    font-size: 14px;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  /* LAYOUT */
-  .columns {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 20px;
-  }
-
-  /* BOXES */
-  .box {
-    background-color: rgba(102, 0, 38, 0.95);
-    border: 3px solid #ff7fad;
-    padding: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 0 15px #330013, inset 0 0 8px #330013;
-  }
-
-  .box h2 {
-    font-size: 16px;
-    margin-top: 0;
-    border-bottom: 1px solid pink;
-    padding-bottom: 4px;
-  }
-
-  .box p {
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* PHOTO BOX */
-  .photo-box img {
-    width: 100%;
-    border: 2px solid pink;
-    margin-bottom: 8px;
-  }
-
-  /* BIG BIO */
-  .big-bio p {
-    margin-bottom: 12px;
-  }
-
-.mp3-player{
-background:#ffb6d5;
-border:3px solid #ff7fad;
-padding:10px;
-width:220px;
-text-align:center;
-box-shadow:0 0 10px #ff7fad;
-border-radius:12px;
-margin-top:10px;
-}
-
-.player-img{
-width:100%;
-height:120px;
-object-fit:cover;
-border:2px solid #ff7fad;
-margin-bottom:6px;
-}
-
-.song-title{
-font-size:12px;
-font-weight:bold;
-margin-bottom:6px;
-color:#660026;
-}
-
-.controls button{
-background:#ff7fad;
-border:none;
-color:white;
-font-size:16px;
-margin:3px;
-padding:5px 10px;
-border-radius:8px;
-cursor:pointer;
-}
-
-.controls button:hover{
-background:#ff4f94;
-}
-  
-</style>
-</head>
-
-<body>
-
-<div class="wrapper">
-
-  <!-- NAV -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="browse.html">Browse</a>
-    <a href="search.html">Search</a>
-    <a href="messages.html">Messages</a>
-    <a href="blog.html">Blog</a>
-    <a href="bulletins.html">Bulletins</a>
-    <a href="forum.html">Forum</a>
-    <a href="groups.html">Groups</a>
-    <a href="favs.html">Favs</a>
-    <a href="about.html">About</a>
-  </nav>
-
-  <!-- TWO COLUMNS -->
-  <div class="columns">
-
-    <!-- LEFT COLUMN -->
-    <div>
-
-      <div class="box photo-box">
-        <h2>Angelina De Vivo</h2>
-        <img src="thinking.jpg">
-        <img src="me.jpg">
-        <!-- add / remove images freely -->
-      </div>
-
-<div class="mp3-player">
-
-<img src="images/player-image.jpg" class="player-img">
-
-<div class="song-title">Now Playing: ♡ Your Song Name ♡</div>
-
-<audio id="audio">
-  <source src="music/song.mp3" type="audio/mpeg">
-</audio>
-
-<div class="controls">
-<button onclick="playSong()">▶</button>
-<button onclick="pauseSong()">❚❚</button>
-</div>
-
-</div>
-      
-      <div class="box">
-        <h2>Quick Facts</h2>
-        <p>
-          Name: Angelina De Vivo<br>
-          Major: Writing Studies<br>
-          Pronouns: she/her/hers<br>
-          Interests: writing, literature, manga, insects, apples, pokemon, and clown dolls
-        </p>
-      </div>
-
-      <div class="box">
-        <h2>Currently</h2>
-        <p>
-          Listening to: The Carpenters<br>
-          Reading:The Wind Has Risen by Hori Tatsuo<br>
-          Working on: Grad School
-        </p>
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div>
-
-      <div class="box big-bio">
-        <h2>About Me</h2>
-
-        <p>
-          I'm twenty-one years old, I was born and spent the majority of my life in Warner Robins, Georiga. 
-          I'm a proud granddaughter of immigrants who came here from Silicy and Taiwan. As a child I spent majortity of my time
-          absorbed in books -- specifically ones about insects or science -- or playing pokemon on my dsi.
-        </p>
-
-        <p>
-          I'm extremely interested in pomology (study of apples) and entomology. 
-        </p>
-
-      </div>
-
-      <div class="box big-bio">
-        <h2>As a Student</h2>
-        <p>
-         I'm equally interested in STEM and humanities, I spent equal amounts of time in college studying both. 
-        </p>
-      </div>
-
-      <div class="box big-bio">
-        <h2>Disability & Access</h2>
-        <p>
-        Diagnosed medical conditions: 
-        </p>
-        <p>
-          - Ehlers-Danlos Syndrome (EDS)
-        </p>
-        <p>
-          - Postural Orthostatic Tachycardia Syndrome (POTS)
-        </p>
-        <p>
-          - Sensorineural Hearing Loss (SNHL)
-        </p>
-      </div>
-
-      <div class="box big-bio">
-        <h2>Queerness & Identity</h2>
-        <p>
-          
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
 
 </body>
 </html>
