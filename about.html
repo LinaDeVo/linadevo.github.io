@@ -5,6 +5,17 @@
 <title>About Lina</title>
 
 <style>
+  <script>
+const audio = document.getElementById("audio");
+
+function playSong(){
+  audio.play();
+}
+
+function pauseSong(){
+  audio.pause();
+}
+</script>
   body {
     margin: 0;
     padding: 0;
@@ -82,6 +93,47 @@
     margin-bottom: 12px;
   }
 
+.mp3-player{
+background:#ffb6d5;
+border:3px solid #ff7fad;
+padding:10px;
+width:220px;
+text-align:center;
+box-shadow:0 0 10px #ff7fad;
+border-radius:12px;
+margin-top:10px;
+}
+
+.player-img{
+width:100%;
+height:120px;
+object-fit:cover;
+border:2px solid #ff7fad;
+margin-bottom:6px;
+}
+
+.song-title{
+font-size:12px;
+font-weight:bold;
+margin-bottom:6px;
+color:#660026;
+}
+
+.controls button{
+background:#ff7fad;
+border:none;
+color:white;
+font-size:16px;
+margin:3px;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.controls button:hover{
+background:#ff4f94;
+}
+  
 </style>
 </head>
 
@@ -116,6 +168,23 @@
         <!-- add / remove images freely -->
       </div>
 
+<div class="mp3-player">
+
+<img src="images/player-image.jpg" class="player-img">
+
+<div class="song-title">Now Playing: ♡ Your Song Name ♡</div>
+
+<audio id="audio">
+  <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="controls">
+<button onclick="playSong()">▶</button>
+<button onclick="pauseSong()">❚❚</button>
+</div>
+
+</div>
+      
       <div class="box">
         <h2>Quick Facts</h2>
         <p>
